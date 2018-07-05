@@ -18,26 +18,6 @@ SRC_URI_append_rcar = " \
 DEPLOYDIR="${XT_DIR_ABS_SHARED_BOOT_DOMD}"
 
 ##############################################################################
-# Salvator-X H3 ES2.0
-###############################################################################
-# N.B. Device trees for ES 2.0 are based on and use device trees
-# for Salvator-X H3 ES3.0 4x2G: Dom0 has memory and GSX adjustments
-# and DomD and DomA and DomU are used as is.
-###############################################################################
-SRC_URI_append_salvator-x-h3-xt = " \
-    file://r8a7795-salvator-x-4x2g-dom0.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
-    file://r8a7795-salvator-x-4x2g-domd.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
-    file://r8a7795-salvator-x-4x2g-domu.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
-    file://r8a7795-salvator-x-dom0.dts;subdir=git/arch/${ARCH}/boot/dts/renesas \
-"
-
-KERNEL_DEVICETREE_salvator-x-h3-xt = " \
-    renesas/r8a7795-salvator-xs-4x2g-dom0.dtb \
-    renesas/r8a7795-salvator-x-4x2g-domd.dtb \
-    renesas/r8a7795-salvator-x-4x2g-domu.dtb \
-"
-
-##############################################################################
 # Salvator-X H3 ES3.0 4x2G
 ###############################################################################
 SRC_URI_append_salvator-x-h3-4x2g-xt = " \
